@@ -10,7 +10,7 @@ while True:
 
     osu = os.popen(f"xdotool getwindowname {window}").read()
 
-    if str(osu).strip() == 'osu!':
+    if str(osu).strip().startswith('osu!'):
         root.warp_pointer(4000, 1000)
         d.sync()
     time.sleep(2)
